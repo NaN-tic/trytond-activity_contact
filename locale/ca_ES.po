@@ -1,0 +1,47 @@
+# 
+msgid ""
+msgstr "Content-Type: text/plain; charset=utf-8\n"
+
+msgctxt "field:activity.activity,allowed_contacts:"
+msgid "Allowed Contacts"
+msgstr "Contactes permesos"
+
+msgctxt "field:activity.activity,contacts:"
+msgid "Contacts"
+msgstr "Contactes"
+
+msgctxt "field:activity.activity-party.party,activity:"
+msgid "Activity"
+msgstr "Activitat"
+
+msgctxt "field:activity.activity-party.party,create_date:"
+msgid "Create Date"
+msgstr "Data de creació"
+
+msgctxt "field:activity.activity-party.party,create_uid:"
+msgid "Create User"
+msgstr "Usuari de creació"
+
+msgctxt "field:activity.activity-party.party,id:"
+msgid "ID"
+msgstr "Identificador"
+
+msgctxt "field:activity.activity-party.party,party:"
+msgid "Party"
+msgstr "Tercer"
+
+msgctxt "field:activity.activity-party.party,rec_name:"
+msgid "Name"
+msgstr "Nom"
+
+msgctxt "field:activity.activity-party.party,write_date:"
+msgid "Write Date"
+msgstr "Data modificació"
+
+msgctxt "field:activity.activity-party.party,write_uid:"
+msgid "Write User"
+msgstr "Usuari modificació"
+
+msgctxt "model:activity.activity-party.party,name:"
+msgid "Activity"
+msgstr "Activitat"
