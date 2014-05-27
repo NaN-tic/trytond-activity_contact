@@ -13,7 +13,7 @@ class ActivityParty(ModelSQL):
     __name__ = "activity.activity-party.party"
 
     activity = fields.Many2One('activity.activity', 'Activity',
-        required=True, select=True)
+        required=True, select=True, ondelete='CASCADE')
     party = fields.Many2One('party.party', 'Party', required=True, select=True)
 
 
