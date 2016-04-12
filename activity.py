@@ -5,12 +5,12 @@ from trytond.pool import Pool, PoolMeta
 from trytond.pyson import Eval
 
 __all__ = ['ActivityParty', 'Activity']
-__metaclass__ = PoolMeta
 
 
 class ActivityParty(ModelSQL):
     'Activity'
     __name__ = "activity.activity-party.party"
+    __metaclass__ = PoolMeta
 
     activity = fields.Many2One('activity.activity', 'Activity',
         required=True, select=True, ondelete='CASCADE')
@@ -20,6 +20,7 @@ class ActivityParty(ModelSQL):
 class Activity:
     'Activity'
     __name__ = "activity.activity"
+    __metaclass__ = PoolMeta
 
     allowed_contacts = fields.Function(fields.Many2Many('party.party',
             None, None, 'Allowed Contacts'),

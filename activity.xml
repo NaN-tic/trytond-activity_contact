@@ -3,7 +3,7 @@
     <data>
         <record model="ir.ui.view" id="activity_activity_form_view">
             <field name="model">activity.activity</field>
-            <field name="type">form</field>
+            <field name="type" eval="None"/>
             <field name="name">activity_form</field>
             <field name="inherit" ref="activity.activity_activity_form_view"/>
         </record>
