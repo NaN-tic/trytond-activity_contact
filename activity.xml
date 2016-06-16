@@ -1,11 +1,12 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0"?>
+<!-- This file is part party_comment module for Tryton.
+The COPYRIGHT file at the top level of this repository contains the full copyright notices and license terms. -->
 <tryton>
     <data>
         <record model="ir.ui.view" id="activity_activity_form_view">
             <field name="model">activity.activity</field>
-            <field name="type" eval="None"/>
-            <field name="name">activity_form</field>
             <field name="inherit" ref="activity.activity_activity_form_view"/>
+            <field name="name">activity_form</field>
         </record>
     </data>
 </tryton>
