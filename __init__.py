@@ -1,11 +1,11 @@
 # The COPYRIGHT file at the top level of this repository contains the full
 # copyright notices and license terms.
 from trytond.pool import Pool
-from .activity import *
+from . import activity
 
 
 def register():
     Pool.register(
-        ActivityParty,
-        Activity,
+        activity.ActivityParty,
+        activity.Activity,
         module='activity_contact', type_='model')
