@@ -31,7 +31,7 @@ class Activity:
             ],
         depends=['allowed_contacts'])
 
-    @fields.depends('party', methods=['on_change_with_party'])
+    @fields.depends('party', methods=['party'])
     def on_change_with_allowed_contacts(self, name=None):
         pool = Pool()
         Employee = pool.get('company.employee')
