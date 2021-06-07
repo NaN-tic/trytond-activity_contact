@@ -36,7 +36,7 @@ class Activity(metaclass=PoolMeta):
 
         res = [e.party.id for e in Employee.search([])]
         self.party = self.on_change_with_party()
-        if not self.party:
+        if not self.party or self.party.id < 0:
             return res
         res.extend(r.to.id for r in self.party.relations)
         return res
