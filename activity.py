@@ -21,13 +21,20 @@ class Activity(metaclass=PoolMeta):
     __name__ = "activity.activity"
 
     allowed_contacts = fields.Function(fields.Many2Many('party.party',
-            None, None, 'Allowed Contacts'),
+            None, None, 'Allowed Contacts',
+            context={
+                'company': Eval('company'),
+            },
+            depends=['company']),
         'on_change_with_allowed_contacts')
     contacts = fields.Many2Many('activity.activity-party.party', 'activity',
         'party', 'Contacts', domain=[
             ('id', 'in', Eval('allowed_contacts', [])),
             ],
-        depends=['allowed_contacts'])
+        context={
+            'company': Eval('company'),
+            },
+        depends=['allowed_contacts', 'company'])
 
     @fields.depends('party', methods=['on_change_with_party'])
     def on_change_with_allowed_contacts(self, name=None):
