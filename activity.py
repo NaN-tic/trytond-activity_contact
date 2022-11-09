@@ -12,8 +12,8 @@ class ActivityParty(ModelSQL, metaclass=PoolMeta):
     __name__ = "activity.activity-party.party"
 
     activity = fields.Many2One('activity.activity', 'Activity',
-        required=True, select=True, ondelete='CASCADE')
-    party = fields.Many2One('party.party', 'Party', required=True, select=True)
+        required=True, ondelete='CASCADE')
+    party = fields.Many2One('party.party', 'Party', required=True)
 
 
 class Activity(metaclass=PoolMeta):
