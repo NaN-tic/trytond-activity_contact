@@ -8,5 +8,23 @@ The COPYRIGHT file at the top level of this repository contains the full copyrig
             <field name="inherit" ref="activity.activity_activity_form_view"/>
             <field name="name">activity_form</field>
         </record>
+        <record model="ir.rule.group" id="rule_group_activity_party_companies">
+            <field name="name">User in companies</field>
+            <field name="model">activity.activity-party.party</field>
+            <field name="global_p" eval="True"/>
+        </record>
+        <record model="ir.rule" id="rule_activity_party_companies">
+            <field name="domain"
+                eval="[('company', 'in', Eval('companies', []))]"
+                pyson="1"/>
+            <field name="rule_group" ref="rule_group_activity_party_companies"/>
+        </record>
+
+        <!-- Contact sequence -->
+        <record model="ir.ui.view" id="contact_activity_view_list_sequence">
+            <field name="model">activity.activity-party.party</field>
+            <field name="type">tree</field>
+            <field name="name">contact_activity_list_sequence</field>
+        </record>
     </data>
 </tryton>
