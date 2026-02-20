@@ -34,7 +34,7 @@ class ActivityParty(sequence_ordered(), ModelView, ModelSQL, metaclass=PoolMeta)
     def __setup__(cls):
         super().__setup__()
         cls.__access__.add('activity')
-    
+
     @fields.depends('_parent_activity.id', '_parent_activity.party', 'activity',
                      'company','party')
     def on_change_with_allowed_contacts(self, name=None):
