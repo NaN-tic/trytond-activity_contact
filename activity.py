@@ -56,4 +56,7 @@ class Activity(metaclass=PoolMeta):
     'Activity'
     __name__ = "activity.activity"
 
-    contacts = fields.One2Many('activity.activity-party.party', 'activity', 'Contacts',)
+    contacts = fields.One2Many('activity.activity-party.party', 'activity',
+        'Contacts', context={
+            'company': Eval('company', -1),
+            }, depends=['company'])
